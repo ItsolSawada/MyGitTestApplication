@@ -2,6 +2,7 @@ package com.example.m_sawada.myapplication;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -15,6 +16,12 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         TextView textView = (TextView)findViewById(R.id.text1);
         textView.setText("Test.");
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar1);
+        toolbar.setTitle("TOOLBAR");
+        toolbar.setTitleTextColor(0xff000000);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
 
